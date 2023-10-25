@@ -8,3 +8,16 @@ spring:
     username: sa
     password:
     driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    showSql: true
+    properties:
+      hibernate.formatSql: true
+logging:
+  level.org.hibernate:
+    SQL: DEBUG
+    type.descriptor.sql.BasicBinder: trace
+
+

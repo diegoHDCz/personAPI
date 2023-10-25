@@ -6,8 +6,6 @@ import jakarta.validation.constraints.Pattern;
 
 public record AddressRegisterData(
 
-        @NotNull
-        Long person_id,
 
         @NotBlank
         String street,

@@ -15,7 +15,7 @@ public interface PersonService {
 
     PersonDetailData editPerson(UpdatePersonData person);
 
-    Page<PersonListData> listPerson(Pageable pagination);
+    Page<PersonListData> listPerson(Pageable pagination) throws Exception;
 
     PersonDetailData findOne(Long id);
 
