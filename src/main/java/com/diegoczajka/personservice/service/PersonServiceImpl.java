@@ -1,8 +1,6 @@
 package com.diegoczajka.personservice.service;
 
-import com.diegoczajka.personservice.entity.Address;
 import com.diegoczajka.personservice.entity.Person;
-import com.diegoczajka.personservice.model.Address.AddressRegisterData;
 import com.diegoczajka.personservice.model.Person.PersonDetailData;
 import com.diegoczajka.personservice.model.Person.PersonListData;
 import com.diegoczajka.personservice.model.Person.PersonRegisterData;
@@ -13,8 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.stream.Collectors;
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -47,9 +43,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public Page<PersonListData> listPerson(Pageable pagination)  {
-            var apqp = personRepository.findAll();
-          System.out.println(apqp);
-            return personRepository.findAll(pagination).map(PersonListData::new);
+               return personRepository.findAll(pagination).map(PersonListData::new);
 
     }
 
